@@ -1,60 +1,12 @@
 /* Base styles */
-
-:focus-visible {
-  outline: 3px solid #ffcc00;   
-  outline-offset: 4px;
-  border-radius: 4px;
-}
-
-
-button:focus-visible,
-a:focus-visible {
-  background-color: #005580;   
-  color: #fff;                  
-}
-
-/* Navigation links */
-nav a:focus-visible {
-  text-decoration: underline;
-  font-weight: bold;
-}
-
-
-nav.open {
-  display: block;
-}
-
 body {
-  font-family: 'Roboto', sans-serif; 
+  font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
   line-height: 1.6;
   background-color: #f9f9f9;
   color: #333;
 }
-.course-card {
-    border: 1px solid #ccc;
-    padding: 1rem;
-    margin: 1rem 0;
-    border-radius: 5px;
-    background-color: #fff;
-  }
-  
-  .course-card.completed {
-    background-color: #e0ffe0; 
-    border-color: #2e8b57;
-  }
-  
-  .filters {
-    margin-bottom: 1rem;
-  }
-  
-  .filters button {
-    margin-right: 0.5rem;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-  }
-  
 
 /* Header */
 header {
@@ -86,7 +38,7 @@ header .site-name {
 
 /* Navigation */
 nav {
-  display: none; 
+  display: none; /* hidden by default on small screens */
   background-color: #006699;
 }
 
@@ -107,7 +59,8 @@ nav a {
   text-decoration: none;
 }
 
-nav a:hover {
+nav a:hover,
+nav a:focus-visible {
   background-color: #004466;
 }
 
@@ -133,7 +86,14 @@ footer a {
   text-decoration: none;
 }
 
-footer a:hover {
+footer a:hover,
+footer a:focus-visible {
   text-decoration: underline;
 }
 
+/* Accessibility focus */
+:focus-visible {
+  outline: 3px solid #ffcc00;
+  outline-offset: 4px;
+  border-radius: 4px;
+}
