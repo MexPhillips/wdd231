@@ -1,0 +1,58 @@
+/* Larger screen styles */
+@media (min-width: 768px) {
+  /* Header */
+  header {
+    justify-content: flex-start;
+  }
+
+  .menu-toggle {
+    display: none; /* hide hamburger on large screens */
+  }
+
+  /* Navigation */
+  nav {
+    display: block; /* show nav on larger screens */
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  nav li {
+    border: none;
+  }
+
+  nav a {
+    padding: 1rem 2rem;
+  }
+
+  nav a:hover {
+    background-color: #005580;
+  }
+
+  /* Main layout */
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  section {
+    margin-bottom: 3rem;
+  }
+
+  /* Footer */
+  footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    padding: 1rem 2rem;
+  }
+
+  footer .social-links {
+    display: flex;
+    gap: 1rem;
+  }
+}

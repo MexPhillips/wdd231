@@ -1,0 +1,139 @@
+/* Base styles */
+
+:focus-visible {
+  outline: 3px solid #ffcc00;   
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+
+button:focus-visible,
+a:focus-visible {
+  background-color: #005580;   
+  color: #fff;                  
+}
+
+/* Navigation links */
+nav a:focus-visible {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+
+nav.open {
+  display: block;
+}
+
+body {
+  font-family: 'Roboto', sans-serif; 
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+}
+.course-card {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 5px;
+    background-color: #fff;
+  }
+  
+  .course-card.completed {
+    background-color: #e0ffe0; 
+    border-color: #2e8b57;
+  }
+  
+  .filters {
+    margin-bottom: 1rem;
+  }
+  
+  .filters button {
+    margin-right: 0.5rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+  }
+  
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #004466;
+  color: #fff;
+}
+
+header .logo {
+  width: 40px;
+  height: auto;
+}
+
+header .site-name {
+  font-weight: bold;
+  margin-left: 0.5rem;
+}
+
+.menu-toggle {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Navigation */
+nav {
+  display: none; 
+  background-color: #006699;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  border-bottom: 1px solid #004466;
+}
+
+nav a {
+  display: block;
+  padding: 1rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+nav a:hover {
+  background-color: #004466;
+}
+
+/* Main content */
+main {
+  padding: 1rem;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+/* Footer */
+footer {
+  background-color: #004466;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+
+footer a {
+  color: #ffcc00;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+

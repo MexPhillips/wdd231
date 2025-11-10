@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WDD 231 | Course Home Page</title>
+  <meta name="description" content="Course home page for WDD 231: Web Frontend Development I.">
+  <meta name="author" content="Phillip Kaluba">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/large.css">
+</head>
+<body>
+  <header>
+    
+    <img src="images/logo.svg" alt="Site Logo" class="logo">
+   
+    <span class="site-name">Phillip</span>
+   
+    <button class="menu-toggle" aria-label="Open navigation menu">
+      &#9776;
+    </button>
+  </header>
+
+  <nav>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="chamber.html">Chamber</a></li>
+      <li><a href="final.html">Final</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1>Home</h1>
+    <section>
+      <h2>Overview</h2>
+      <p>Welcome to the WDD 231 Course Home Page. Here you’ll find a collection of projects and assignments that apply essential web technologies — HTML, CSS, and JavaScript — while building toward advanced frontend development practices</p>
+    </section>
+    <section>
+      <h2>Assignments</h2>
+      <p>Links and details for weekly assignments will appear here.</p>
+    </section>
+    <section>
+      <h2>Course Certificate</h2>
+      <div id="courses"></div>
+    </section>
+    <section>
+        <h2>Course Certificate</h2>
+        <div class="filters">
+          <button id="filter-all">All Courses</button>
+          <button id="filter-wdd">WDD Courses</button>
+          <button id="filter-cse">CSE Courses</button>
+        </div>
+        <div id="courses"></div>
+        <p id="credits"></p>
+      </section>
+      
+  </main>
+
+  <footer>
+    <div class="social-links">
+      <a href="https://github.com/mexphillips" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/yourlinkedinprofile" target="_blank">LinkedIn</a>
+      
+    </div>
+    <p>&copy; <span id="year"></span> Phillip | Uganda</p>
+    <p id="lastModified"></p>
+  </footer>
+
+  <!-- JavaScript files -->
+  <script src="scripts/main.js" defer></script>
+  
+</body>
+</html>
