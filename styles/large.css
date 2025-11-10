@@ -70,3 +70,9 @@
     gap: 1rem;
   }
 }
+
+header, footer {
+  background-color: #005066; /* darker teal */
+  color: #ffffff;
+}
+
