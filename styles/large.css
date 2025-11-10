@@ -43,6 +43,36 @@
     margin-bottom: 3rem;
   }
 
+  /* Course cards grid */
+  #courses {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+
+  .course-card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .course-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+
+  .course-card.completed {
+    border-left: 6px solid #28a745; /* green accent for completed */
+  }
+
+  .course-card:not(.completed) {
+    border-left: 6px solid #dc3545; /* red accent for not completed */
+  }
+
   /* Footer */
   footer {
     display: flex;
