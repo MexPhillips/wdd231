@@ -50,3 +50,27 @@ img {
   height: auto;
   border-radius: 8px;
 }
+
+.about-section,
+.photo-section {
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  background-color: #f9f9f9;
+}
+
+.about-section {
+  border-left: 6px solid #00796b; /* Teal accent */
+}
+
+.photo-section {
+  border-left: 6px solid #455a64; /* Slate accent */
+  text-align: center;
+}
+
+.photo-section img {
+  max-width: 250px;
+  height: auto;
+  border-radius: 8px;
+}
