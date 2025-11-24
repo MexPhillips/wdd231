@@ -57,3 +57,11 @@ listBtn.addEventListener('click', () => {
 
 // Initialize
 loadMembers();
+
+// Footer auto year + last modified (moved from inline script)
+document.addEventListener('DOMContentLoaded', () => {
+  const yearEl = document.getElementById('year');
+  const lmEl = document.getElementById('lastModified');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+  if (lmEl) lmEl.textContent = document.lastModified;
+});

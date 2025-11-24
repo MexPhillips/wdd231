@@ -2,15 +2,19 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="description" content="Chamber of Commerce Directory Page">
+  <meta name="description" content="Chamber directory listing local businesses and organizations — browse profiles, contact info, and membership levels.">
   <meta name="author" content="Phillip Kaluba">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chamber Directory</title>
   <link rel="icon" href="images/favicon.ico">
   <meta property="og:title" content="Chamber of Commerce Directory">
   <meta property="og:description" content="Explore local businesses and organizations in our chamber.">
-  <meta property="og:image" content="images/social-preview.png">
+  <meta property="og:image" content="https://raw.githubusercontent.com/MexPhillips/wdd231/main/images/logo.svg">
+  <meta property="og:url" content="https://raw.githubusercontent.com/MexPhillips/wdd231/main/chamber/directory.html">
   <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/small.css">
   <link rel="stylesheet" href="styles/large.css">
 </head>
@@ -41,11 +45,6 @@
     <p>Last Modified: <span id="lastModified"></span></p>
   </footer>
 
-  <script src="scripts/directory.js"></script>
-  <script>
-    // Footer auto year + last modified
-    document.getElementById("year").textContent = new Date().getFullYear();
-    document.getElementById("lastModified").textContent = document.lastModified;
-  </script>
+  <script src="scripts/directory.js" defer></script>
 </body>
 </html>

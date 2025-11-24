@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chamber of Commerce</title>
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <h1>My Chamber of Commerce</h1>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="join.html">Join</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <img src="images/hero.jpg" alt="City view">
+    <div class="cta">
+      <h2>Welcome to Our Chamber</h2>
+      <a href="join.html" class="btn">Join the Chamber</a>
+    </div>
+  </section>
+
+  <!-- Events Section -->
+  <section class="events">
+    <h2>Upcoming Events</h2>
+    <ul>
+      <li>Business Networking – Nov 30</li>
+      <li>Holiday Market – Dec 15</li>
+      <li>Annual Gala – Jan 10</li>
+    </ul>
+  </section>
+
+  <!-- Weather Section -->
+  <section class="weather">
+    <h2>Local Weather</h2>
+    <div id="weather-info">
+      <p>Loading weather data...</p>
+    </div>
+  </section>
+
+  <!-- Spotlights Section -->
+  <section class="spotlights">
+    <h2>Member Spotlights</h2>
+    <div id="spotlight-container"></div>
+  </section>
+
+  <footer>
+    <p>&copy; <span id="year"></span> My Chamber of Commerce</p>
+    <p>Last Modified: <span id="lastModified"></span></p>
+  </footer>
+
+  <script src="scripts/weather.js" defer></script>
+  <script src="scripts/spotlights.js" defer></script>
+</body>
+</html>
