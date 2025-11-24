@@ -1,0 +1,68 @@
+
+{
+  "members": [
+    {
+      "name": "Sunrise Bakery",
+      "address": "123 Main Street, Jinja",
+      "phone": "+256 700 123456",
+      "website": "https://sunrisebakery.ug",
+      "image": "images/sunrise-bakery.png",
+      "membershipLevel": 1,
+      "info": "Local bakery specializing in fresh bread and pastries."
+    },
+    {
+      "name": "Nile Tech Solutions",
+      "address": "45 Kampala Road, Jinja",
+      "phone": "+256 701 987654",
+      "website": "https://niletech.ug",
+      "image": "images/nile-tech.png",
+      "membershipLevel": 3,
+      "info": "IT consulting and software development services."
+    },
+    {
+      "name": "Green Leaf Supermarket",
+      "address": "Market Street, Jinja",
+      "phone": "+256 702 456789",
+      "website": "https://greenleaf.ug",
+      "image": "images/green-leaf.png",
+      "membershipLevel": 2,
+      "info": "Family-owned supermarket offering fresh produce and household goods."
+    },
+    {
+      "name": "Victoria Hotel",
+      "address": "Lake View Road, Jinja",
+      "phone": "+256 703 112233",
+      "website": "https://victoriahotel.ug",
+      "image": "images/victoria-hotel.png",
+      "membershipLevel": 3,
+      "info": "Luxury hotel with conference facilities and lake views."
+    },
+    {
+      "name": "Jinja Fitness Center",
+      "address": "Sports Complex, Jinja",
+      "phone": "+256 704 334455",
+      "website": "https://jinjafitness.ug",
+      "image": "images/jinja-fitness.png",
+      "membershipLevel": 1,
+      "info": "Gym and wellness programs for all ages."
+    },
+    {
+      "name": "Pearl Transport Services",
+      "address": "Industrial Area, Jinja",
+      "phone": "+256 705 667788",
+      "website": "https://pearltransport.ug",
+      "image": "images/pearl-transport.png",
+      "membershipLevel": 2,
+      "info": "Logistics and transport solutions across Uganda."
+    },
+    {
+      "name": "Riverbank Café",
+      "address": "Nile Bridge Road, Jinja",
+      "phone": "+256 706 998877",
+      "website": "https://riverbankcafe.ug",
+      "image": "images/riverbank-cafe.png",
+      "membershipLevel": 1,
+      "info": "Coffee shop with outdoor seating by the river."
+    }
+  ]
+}

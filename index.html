@@ -1,33 +1,87 @@
-<main>
-  <h1>Phillip Kaluba | Course Home Page</h1>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Phillip Kaluba">
+    <meta name="description" content="Course homepage for Phillip Kaluba showing projects, certificates, and portfolio work in responsive layout.">
+    <title>Phillip Kaluba | Course Home Page</title>
 
-  <section class="about-section">
-    <h2>About Me</h2>
-    <p>
-      I'm Phillip Kaluba, a passionate software engineering student at BYU with a deep love for learning and problem-solving. I thrive on turning complex challenges into elegant solutions whether it's debugging code, refining web layouts, or optimizing accessibility. My journey is fueled by curiosity, resilience, and a commitment to growth. I enjoy building clean, responsive websites that not only function well but also look great. Every project is a chance to improve, iterate, and push my skills further. Welcome to my course homepage a reflection of my progress, creativity, and drive to succeed.
-    </p>
-  </section>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
 
-  <section class="photo-section">
-    <h2>Student Photo</h2>
-    <img src="images/phillip.jpg" alt="Portrait of Phillip Kaluba" />
-  </section>
+    <link rel="stylesheet" href="styles/small.css" />
+    <link rel="stylesheet" href="styles/large.css" />
+  </head>
+  <body>
+    <header>
+      <div class="site-brand">
+        <!-- optional logo image; replace with your logo if you have one -->
+        <img src="images/logo-placeholder.png" alt="Site Logo" aria-hidden="true" />
+        <div class="site-name">Phillip Kaluba</div>
+      </div>
 
-  <section class="projects-section">
-    <h2>Projects</h2>
-    <p>
-      A few highlights from my coursework and personal projects — responsive sites, interactive JavaScript features, and accessible layouts. Check the Final Project and Chamber Project pages for details.
-    </p>
-  </section>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation menu">☰</button>
 
-  <section class="courses">
-    <h2>Web Certificate Courses</h2>
-    <div class="filters">
-      <button id="filterAll">All</button>
-      <button id="filterCSE">CSE</button>
-      <button id="filterWDD">WDD</button>
-    </div>
-    <div id="courses"></div>
-    <p id="totalCredits">Total credits: 0</p>
-  </section>
-</main>
+      <nav id="primary-nav" class="nav" aria-label="Primary navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="chamber.html">Chamber Project</a></li>
+          <li><a href="chamber/directory.html">Directory</a></li>
+          <li><a href="final.html">Final Project</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Phillip Kaluba | Course Home Page</h1>
+
+      <section class="about-section">
+        <h2>About Me</h2>
+        <p>
+          I'm Phillip Kaluba, a passionate software engineering student at BYU with a deep love for
+          learning and problem-solving. I thrive on turning complex challenges into elegant
+          solutions whether it's debugging code, refining web layouts, or optimizing
+          accessibility. My journey is fueled by curiosity, resilience, and a commitment to
+          growth. I enjoy building clean, responsive websites that not only function well but
+          also look great. Every project is a chance to improve, iterate, and push my skills
+          further. Welcome to my course homepage — a reflection of my progress, creativity,
+          and drive to succeed.
+        </p>
+      </section>
+
+      <section class="photo-section">
+        <h2>Student Photo</h2>
+        <img src="images/phillip.jpg" alt="Portrait of Phillip Kaluba" />
+      </section>
+
+      <section class="projects-section">
+        <h2>Projects</h2>
+        <p>
+          A few highlights from my coursework and personal projects — responsive sites,
+          interactive JavaScript features, and accessible layouts. Check the Final Project and
+          Chamber Project pages for details.
+        </p>
+      </section>
+
+      <section class="courses">
+        <h2>Web Certificate Courses</h2>
+        <div class="filters">
+          <button id="filterAll">All</button>
+          <button id="filterCSE">CSE</button>
+          <button id="filterWDD">WDD</button>
+        </div>
+        <div id="courses"></div>
+        <p id="totalCredits">Total credits: 0</p>
+      </section>
+    </main>
+
+    <footer>
+      <p>© <span id="year"></span> • Phillip Kaluba • Uganda</p>
+      <p>Last Modification: <span id="lastModified"></span></p>
+    </footer>
+
+    <script src="scripts/main.js" defer></script>
+  </body>
+</html>

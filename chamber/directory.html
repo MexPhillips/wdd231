@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Chamber of Commerce Directory Page">
+  <meta name="author" content="Phillip Kaluba">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chamber Directory</title>
+  <link rel="icon" href="images/favicon.ico">
+  <meta property="og:title" content="Chamber of Commerce Directory">
+  <meta property="og:description" content="Explore local businesses and organizations in our chamber.">
+  <meta property="og:image" content="images/social-preview.png">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/large.css">
+</head>
+
+<body>
+  <header>
+    <h1>Chamber of Commerce</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="directory.html" class="active">Directory</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="view-toggle">
+      <button id="grid-view">Grid View</button>
+      <button id="list-view">List View</button>
+    </div>
+
+    <section id="members"></section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> | Phillip Kaluba | WDD 231</p>
+    <p>Last Modified: <span id="lastModified"></span></p>
+  </footer>
+
+  <script src="scripts/directory.js"></script>
+  <script>
+    // Footer auto year + last modified
+    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("lastModified").textContent = document.lastModified;
+  </script>
+</body>
+</html>
