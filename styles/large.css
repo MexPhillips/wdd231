@@ -3,13 +3,8 @@
     flex-direction: row;
   }
 
-  .spacer {
-    display: block;
-    flex: 0.5;
-  }
-
   nav {
-    display: block;
+    display: block; /* Show nav menu on desktop */
   }
 
   nav ul {
@@ -43,6 +38,11 @@
     display: flex;
     gap: 1rem;
   }
+
+  /* Hide hamburger on desktop */
+  .menu-toggle {
+    display: none;
+  }
 }
 
 img {
@@ -61,11 +61,11 @@ img {
 }
 
 .about-section {
-  border-left: 6px solid #00796b; /* Teal accent */
+  border-left: 6px solid #00796b;
 }
 
 .photo-section {
-  border-left: 6px solid #455a64; /* Slate accent */
+  border-left: 6px solid #455a64;
   text-align: center;
 }
 
@@ -73,4 +73,32 @@ img {
   max-width: 250px;
   height: auto;
   border-radius: 8px;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+main section {
+  flex: 1;
+  min-width: 250px;
+  background: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+header {
+  display: flex;
+  justify-content: center; /* centers everything inside header */
+  align-items: center;
+}
+nav ul {
+  display: flex;
+  gap: 1rem;
+  justify-content: center; /* centers the links themselves */
 }
