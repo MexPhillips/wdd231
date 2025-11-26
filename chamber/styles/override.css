@@ -1,0 +1,24 @@
+/* override.css — small page-specific overrides for Chamber pages
+   Keeps the original layout while allowing the page to include a second stylesheet
+   without importing site-wide desktop layout rules from ../styles/large.css */
+
+/* Use site font and ensure base styles don't change layout */
+:root {
+  --chamber-primary: #1a5f7a;
+  --chamber-accent: #d4af37;
+}
+
+body {
+  font-family: 'Roboto', system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
+}
+
+/* Ensure main layout remains controlled by chamber/styles/main.css */
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Minimal footer tweak if needed */
+footer {
+  box-sizing: border-box;
+}
