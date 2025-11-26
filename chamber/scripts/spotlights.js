@@ -1,54 +1,76 @@
-async function loadSpotlights() {
-  try {
-    const response = await fetch("data/members.json");
-    const data = await response.json();
-    const members = data.members || [];
+// spotlights.js - Fetch members data and display random spotlights
 
-    // Pick Gold (membershipLevel 3) and Silver (membershipLevel 2)
-    const spotlightMembers = members.filter(m => m.membershipLevel >= 2);
+// Fetch and display member spotlights
+async function displaySpotlights() {
+    const spotlightsContainer = document.getElementById('spotlights-container');
+    
+    try {
+        // Fetch members data
+        const response = await fetch('data/members.json');
+        
+        if (!response.ok) {
+            throw new Error('Members data not available');
+        }
 
-    const selected = [];
-    const pool = [...spotlightMembers];
-    while (selected.length < 3 && pool.length > 0) {
-      const index = Math.floor(Math.random() * pool.length);
-      selected.push(pool.splice(index, 1)[0]);
+        const members = await response.json();
+
+        // Filter for gold and silver members only
+        const premiumMembers = members.filter(member => 
+            member.membership.toLowerCase() === 'gold' || 
+            member.membership.toLowerCase() === 'silver'
+        );
+
+        if (premiumMembers.length === 0) {
+            spotlightsContainer.innerHTML = '<p class="loading">No premium members available for display.</p>';
+            return;
+        }
+
+        // Randomly select 2-3 members
+        const numberOfSpotlights = Math.min(
+            Math.floor(Math.random() * 2) + 2, // Random between 2-3
+            premiumMembers.length // Don't exceed available members
+        );
+
+        // Shuffle members and select random ones
+        const selectedMembers = [];
+        const availableIndices = [...Array(premiumMembers.length).keys()];
+        
+        for (let i = 0; i < numberOfSpotlights; i++) {
+            const randomIndex = Math.floor(Math.random() * availableIndices.length);
+            selectedMembers.push(premiumMembers[availableIndices[randomIndex]]);
+            availableIndices.splice(randomIndex, 1);
+        }
+
+        // Build HTML for spotlights
+        let spotlightsHTML = '';
+        
+        selectedMembers.forEach(member => {
+            const membershipClass = member.membership.toLowerCase();
+            spotlightsHTML += `
+                <div class="spotlight-card">
+                    <img src="${member.image}" alt="${member.name} logo" loading="lazy">
+                    <h3>${member.name}</h3>
+                    <div class="membership-badge ${membershipClass}">
+                        ${member.membership.toUpperCase()} Member
+                    </div>
+                    <div class="spotlight-info">
+                        <p><strong>Phone:</strong> ${member.phone}</p>
+                        <p><strong>Address:</strong> ${member.address}</p>
+                        <a href="${member.website}" target="_blank" class="spotlight-link">Visit Website →</a>
+                    </div>
+                </div>
+            `;
+        });
+
+        spotlightsContainer.innerHTML = spotlightsHTML;
+
+    } catch (error) {
+        console.error('Error fetching spotlights:', error);
+        spotlightsContainer.innerHTML = `
+            <p class="loading">Unable to load member spotlights. Please ensure the members.json file exists in the data folder.</p>
+        `;
     }
-
-    const container = document.getElementById("spotlight-container");
-    if (!container) return;
-
-    if (selected.length === 0) {
-      container.innerHTML = '<p>No featured members available at this time.</p>';
-    } else {
-      // use a fallback image for missing logos (relative to chamber page -> ../images/logo.svg)
-      const fallback = '../images/logo.svg';
-      container.innerHTML = selected.map(m => `
-        <div class="spotlight">
-          <img src="${m.image}" alt="${m.name} logo" onerror="this.onerror=null;this.src='${fallback}';">
-          <h3>${m.name}</h3>
-          <p>${m.phone}</p>
-          <p>${m.address}</p>
-          <a href="${m.website}" target="_blank" rel="noopener">Visit Website</a>
-          <p>Membership: ${m.membershipLevel === 3 ? 'Gold' : m.membershipLevel === 2 ? 'Silver' : 'Member'}</p>
-        </div>
-      `).join("");
-    }
-  } catch (error) {
-    const container = document.getElementById("spotlight-container");
-    if (container) container.textContent = "Error loading member spotlights.";
-    console.error("Error loading spotlights:", error);
-  }
 }
 
-// Footer year + last modified helper
-function setFooterMeta() {
-  const yearEl = document.getElementById('year');
-  const lmEl = document.getElementById('lastModified');
-  if (yearEl) yearEl.textContent = new Date().getFullYear();
-  if (lmEl) lmEl.textContent = document.lastModified;
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-  loadSpotlights();
-  setFooterMeta();
-});
+// Initialize spotlights display when DOM is loaded
+document.addEventListener('DOMContentLoaded', displaySpotlights);
