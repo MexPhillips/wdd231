@@ -1,11 +1,9 @@
-// spotlights.js - Fetch members data and display random spotlights
 
-// Fetch and display member spotlights
 async function displaySpotlights() {
     const spotlightsContainer = document.getElementById('spotlights-container');
     
     try {
-        // Fetch members data
+      
         const response = await fetch('data/members.json');
         
         if (!response.ok) {
@@ -14,7 +12,6 @@ async function displaySpotlights() {
 
         const members = await response.json();
 
-        // Filter for gold and silver members only
         const premiumMembers = members.filter(member => 
             member.membership.toLowerCase() === 'gold' || 
             member.membership.toLowerCase() === 'silver'
@@ -25,13 +22,13 @@ async function displaySpotlights() {
             return;
         }
 
-        // Randomly select 2-3 members
+   
         const numberOfSpotlights = Math.min(
-            Math.floor(Math.random() * 2) + 2, // Random between 2-3
-            premiumMembers.length // Don't exceed available members
+            Math.floor(Math.random() * 2) + 2, 
+            premiumMembers.length 
         );
 
-        // Shuffle members and select random ones
+       
         const selectedMembers = [];
         const availableIndices = [...Array(premiumMembers.length).keys()];
         
@@ -41,12 +38,12 @@ async function displaySpotlights() {
             availableIndices.splice(randomIndex, 1);
         }
 
-        // Build HTML for spotlights
+  
         let spotlightsHTML = '';
         
         selectedMembers.forEach(member => {
             const membershipClass = member.membership.toLowerCase();
-            // add onerror fallback so missing images use the chamber logo
+            
             spotlightsHTML += `
                 <div class="spotlight-card">
                     <img src="${member.image}" alt="${member.name} logo" loading="lazy" onerror="this.src='images/logo.jpg'">
@@ -73,5 +70,4 @@ async function displaySpotlights() {
     }
 }
 
-// Initialize spotlights display when DOM is loaded
 document.addEventListener('DOMContentLoaded', displaySpotlights);

@@ -1,15 +1,15 @@
 
 
-const WEATHER_API_KEY = 'YOUR_OPENWEATHERMAP_API_KEY'; // Replace with your API key from openweathermap.org
-const CHAMBER_LATITUDE = 40.7128; // New York City (example - change to your chamber location)
-const CHAMBER_LONGITUDE = -74.0060; // New York City (example - change to your chamber location)
+const WEATHER_API_KEY = 'YOUR_OPENWEATHERMAP_API_KEY'; 
+const CHAMBER_LATITUDE = 40.7128; 
+const CHAMBER_LONGITUDE = -74.0060; 
 
-// Fetch weather data and display it
+
 async function displayWeather() {
     const weatherContainer = document.getElementById('weather-container');
     
     try {
-        // Fetch current weather data
+    
         const response = await fetch(
             `https://api.openweathermap.org/data/2.5/forecast?lat=${CHAMBER_LATITUDE}&lon=${CHAMBER_LONGITUDE}&units=imperial&appid=${WEATHER_API_KEY}`
         );
@@ -20,14 +20,13 @@ async function displayWeather() {
 
         const data = await response.json();
 
-        // Extract current weather (first entry in forecast)
+        
         const current = data.list[0];
         const current_temp = Math.round(current.main.temp);
         const current_desc = current.weather[0].description;
         const current_icon = getWeatherIcon(current.weather[0].main);
 
-        // Get 3-day forecast (every 24 hours = every 8th entry in the list)
-        const forecast = [];
+       
         for (let i = 0; i < data.list.length; i += 8) {
             if (forecast.length < 3) {
                 const dayData = data.list[i];
@@ -41,7 +40,7 @@ async function displayWeather() {
             }
         }
 
-        // Build HTML for current weather
+        
         let weatherHTML = `
             <div class="current-weather">
                 <h3>Current Weather</h3>
@@ -56,7 +55,6 @@ async function displayWeather() {
             <div class="forecast">
         `;
 
-        // Add forecast days
         forecast.forEach((day, index) => {
             const dayName = day.date.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
             weatherHTML += `
@@ -91,7 +89,7 @@ async function displayWeather() {
     }
 }
 
-// Function to convert weather condition to emoji icon
+
 function getWeatherIcon(condition) {
     const iconMap = {
         'Clear': '☀️',
@@ -116,5 +114,5 @@ function getWeatherIcon(condition) {
     return iconMap[condition] || '🌤️';
 }
 
-// Initialize weather display when DOM is loaded
+
 document.addEventListener('DOMContentLoaded', displayWeather);
