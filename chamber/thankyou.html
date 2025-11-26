@@ -6,6 +6,17 @@
   <title>Thank You — Chamber</title>
    <meta name="author"  content="Kaluba Phillip">
   <meta name="description" content="Thank you for joining the Commerce City Chamber.">
+  <!-- Google Fonts preconnect and stylesheet -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <!-- Favicon and Open Graph tags -->
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Thank You — Commerce City Chamber Application Received">
+  <meta property="og:description" content="Thank you for applying to join the Commerce City Chamber. We'll review your application and be in touch with next steps.">
+  <meta property="og:image" content="https://mexphillips.github.io/wdd231/chamber/images/hero.jpg">
+  <meta property="og:url" content="https://mexphillips.github.io/wdd231/chamber/thankyou.html">
   <link rel="stylesheet" href="styles/main.css">
   <link rel="stylesheet" href="styles/override.css">
 </head>
@@ -61,22 +72,6 @@
     </div>
   </footer>
 
-  <script>
-    // read query params and populate fields
-    (function(){
-      const params = new URLSearchParams(window.location.search);
-      document.getElementById('out-first').textContent = params.get('first') || '';
-      document.getElementById('out-last').textContent = params.get('last') || '';
-      document.getElementById('out-email').textContent = params.get('email') || '';
-      document.getElementById('out-mobile').textContent = params.get('mobile') || '';
-      document.getElementById('out-business').textContent = params.get('business') || '';
-      const ts = params.get('timestamp');
-      document.getElementById('out-timestamp').textContent = ts ? new Date(ts).toString() : '';
-
-      // footer
-      document.getElementById('year').textContent = new Date().getFullYear();
-      document.getElementById('last-modified').textContent = document.lastModified;
-    })();
-  </script>
+  <script src="scripts/site.js" defer></script>
 </body>
 </html>

@@ -19,12 +19,20 @@ document.addEventListener('DOMContentLoaded', () => {
     modal.setAttribute('aria-hidden','false');
     modal.classList.add('open');
     document.body.style.overflow = 'hidden';
+    // Accessibility: trap focus inside modal and remember opener
+    lastFocused = document.activeElement;
+    focusable = modal.querySelectorAll(focusableSelectors);
+    if (focusable.length) focusable[0].focus();
+    document.addEventListener('keydown', trapTabKey);
   }
 
   function closeModal() {
     modal.setAttribute('aria-hidden','true');
     modal.classList.remove('open');
     document.body.style.overflow = '';
+    // restore focus
+    document.removeEventListener('keydown', trapTabKey);
+    if (lastFocused) lastFocused.focus();
   }
 
   document.querySelectorAll('.details-link').forEach(a => {
@@ -48,5 +56,28 @@ document.addEventListener('DOMContentLoaded', () => {
   const tsEl = document.getElementById('timestamp');
   if (tsEl && !tsEl.value) {
     tsEl.value = new Date().toISOString();
+  }
+  // Focus-trap helpers
+  let lastFocused = null;
+  let focusable = [];
+  const focusableSelectors = 'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), [tabindex]:not([tabindex="-1"])';
+
+  function trapTabKey(e) {
+    if (!modal.classList.contains('open')) return;
+    if (e.key !== 'Tab') return;
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    if (!first) return;
+    if (e.shiftKey) {
+      if (document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      }
+    } else {
+      if (document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    }
   }
 });

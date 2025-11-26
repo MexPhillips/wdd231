@@ -6,6 +6,16 @@
   <title>Join — Chamber Membership</title>
   <meta name="author"  content="Kaluba Phillip">
   <meta name="description" content="Apply to join the Commerce City Chamber — select your membership level and submit your application.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Join the Commerce City Chamber — Membership Application">
+  <meta property="og:description" content="Apply to join the Commerce City Chamber and choose a membership level that fits your business. Benefits scale from NP to Gold including events, advertising, and spotlights.">
+  <meta property="og:image" content="https://mexphillips.github.io/wdd231/chamber/images/hero.jpg">
+  <meta property="og:url" content="https://mexphillips.github.io/wdd231/chamber/join.html">
   <link rel="stylesheet" href="styles/main.css">
   <link rel="stylesheet" href="styles/override.css">
 </head>
@@ -39,11 +49,11 @@
       <form id="join-form" action="thankyou.html" method="get" novalidate>
         <div class="form-grid">
           <label for="first">First name<span class="required">*</span>
-            <input id="first" name="first" type="text" autocomplete="given-name" required>
+            <input id="first" name="first" type="text" autocomplete="given-name" title="Enter your first name" required>
           </label>
 
           <label for="last">Last name<span class="required">*</span>
-            <input id="last" name="last" type="text" autocomplete="family-name" required>
+            <input id="last" name="last" type="text" autocomplete="family-name" title="Enter your last name" required>
           </label>
 
           <label for="title">Organizational title<span class="required">*</span>
@@ -51,15 +61,15 @@
           </label>
 
           <label for="email">Email<span class="required">*</span>
-            <input id="email" name="email" type="email" placeholder="name@example.com" required>
+            <input id="email" name="email" type="email" autocomplete="email" title="Enter your email address" placeholder="name@example.com" required>
           </label>
 
           <label for="mobile">Mobile phone<span class="required">*</span>
-            <input id="mobile" name="mobile" type="tel" autocomplete="tel" required>
+            <input id="mobile" name="mobile" type="tel" autocomplete="tel" title="Enter your mobile phone number" required>
           </label>
 
           <label for="business">Business / Organization<span class="required">*</span>
-            <input id="business" name="business" type="text" autocomplete="organization" required>
+            <input id="business" name="business" type="text" autocomplete="organization" title="Enter your business or organization name" required>
           </label>
 
           <fieldset class="membership-level">
@@ -71,7 +81,7 @@
           </fieldset>
 
           <label for="description">Business description
-            <textarea id="description" name="description" rows="4" placeholder="Describe your business or services"></textarea>
+            <textarea id="description" name="description" rows="4" title="Brief description of your organization" placeholder="Describe your business or services"></textarea>
           </label>
 
           <input type="hidden" id="timestamp" name="timestamp" value="">
@@ -137,16 +147,6 @@
   </footer>
 
   <script src="scripts/modals.js" defer></script>
-  <script>
-    // Inline footer scripts as requested
-    document.getElementById('year').textContent = new Date().getFullYear();
-    document.getElementById('last-modified').textContent = document.lastModified;
-    // fill timestamp field
-    (function(){
-      const ts = new Date().toISOString();
-      const el = document.getElementById('timestamp');
-      if(el) el.value = ts;
-    })();
-  </script>
+  <script src="scripts/site.js" defer></script>
 </body>
 </html>
