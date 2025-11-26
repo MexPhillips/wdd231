@@ -4,7 +4,7 @@
         "phone": "(256) 123-4567",
         "address": "456 Tech Drive, Commerce City, ST 12345",
         "website": "https://www.techvisionsolutions.example.com",
-        "image": "images/members/vision.png",
+        "image": "images/members/vision.jpg",
         "membership": "Gold"
     },
     {
@@ -12,7 +12,7 @@
         "phone": "(256) 234-5678",
         "address": "789 Finance Avenue, Commerce City, ST 12345",
         "website": "https://www.premierbankinggroup.example.com",
-        "image": "images/members/premierbank.png",
+        "image": "images/members/premier.jpg",
         "membership": "Gold"
     },
     {
@@ -20,7 +20,7 @@
         "phone": "(256) 345-6789",
         "address": "321 Main Street, Commerce City, ST 12345",
         "website": "https://www.sunriserestaurant.example.com",
-        "image": "images/members/sunrise.png",
+        "image": "images/members/sun.jpg",
         "membership": "Silver"
     },
     {
@@ -28,7 +28,7 @@
         "phone": "(256) 456-7890",
         "address": "654 Green Lane, Commerce City, ST 12345",
         "website": "https://www.ecogreensustainability.example.com",
-        "image": "images/members/eco.png",
+        "image": "images/members/eco.jpg",
         "membership": "Silver"
     },
     {
@@ -36,7 +36,7 @@
         "phone": "(256) 567-8901",
         "address": "987 Medical Center, Commerce City, ST 12345",
         "website": "https://www.healthcareplusclinic.example.com",
-        "image": "images/members/health.png",
+        "image": "images/members/health.jpg",
         "membership": "Gold"
     },
     {
@@ -44,7 +44,7 @@
         "phone": "(256) 678-9012",
         "address": "111 Artist Road, Commerce City, ST 12345",
         "website": "https://www.creativedesignstudio.example.com",
-        "image": "images/members/creativedesign.png",
+        "image": "images/members/creative.jpg",
         "membership": "Silver"
     },
     {
@@ -52,7 +52,7 @@
         "phone": "(256) 789-0123",
         "address": "222 Education Drive, Commerce City, ST 12345",
         "website": "https://www.corporatetrainingexperts.example.com",
-        "image": "images/members/corporatetraining.png",
+        "image": "images/members/corporate.jpg",
         "membership": "Bronze"
     },
     {
@@ -60,7 +60,7 @@
         "phone": "(256) 890-1234",
         "address": "333 Advertising Way, Commerce City, ST 12345",
         "website": "https://www.localmarketingpros.example.com",
-        "image": "images/members/localmarketing.png",
+        "image": "images/members/local.png",
         "membership": "Bronze"
     }
 ]

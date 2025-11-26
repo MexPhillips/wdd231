@@ -46,9 +46,10 @@ async function displaySpotlights() {
         
         selectedMembers.forEach(member => {
             const membershipClass = member.membership.toLowerCase();
+            // add onerror fallback so missing images use the chamber logo
             spotlightsHTML += `
                 <div class="spotlight-card">
-                    <img src="${member.image}" alt="${member.name} logo" loading="lazy">
+                    <img src="${member.image}" alt="${member.name} logo" loading="lazy" onerror="this.src='images/logo.jpg'">
                     <h3>${member.name}</h3>
                     <div class="membership-badge ${membershipClass}">
                         ${member.membership.toUpperCase()} Member
