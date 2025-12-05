@@ -627,6 +627,31 @@ footer {
     }
 }
 
+/* Discover page styles */
+.discover-page { padding: 1.5rem; max-width: 1200px; margin: 0 auto; }
+.discover-page .hero { height: 220px; margin-bottom: 1rem; }
+.demographics-grid { display: grid; grid-template-columns: repeat(1,1fr); gap: 1rem; }
+.demographics-grid .stat { background: var(--white); padding: 1rem; border-radius:6px; text-align:center; box-shadow: 0 2px 6px rgba(0,0,0,0.05); }
+.events-list { display: grid; gap: 0.75rem; }
+.event-card { background: var(--white); padding: 1rem; border-radius:6px; }
+.attraction-grid { display: grid; grid-template-columns: 1fr; gap: 0.75rem; }
+.attraction img { width:100%; height:160px; object-fit:cover; border-radius:6px; }
+
+.members-grid { display: grid; gap: 1rem; grid-template-columns: 1fr; }
+.member-card { display:flex; gap: 0.75rem; align-items:center; background:var(--white); padding:0.75rem; border-radius:6px; }
+.member-logo { width:80px; height:80px; object-fit:contain; border-radius:6px; background:#fff; border:1px solid var(--border-color); }
+.member-info h3 { margin:0 0 0.25rem 0; }
+.member-link { display:inline-block; margin-top:0.5rem; color:var(--primary-color); text-decoration:none; font-weight:600 }
+
+.visit-info { margin-bottom: 0.5rem; color: var(--light-text); }
+
+@media (min-width: 700px) {
+    .demographics-grid { grid-template-columns: repeat(3,1fr); }
+    .attraction-grid { grid-template-columns: repeat(3, 1fr); }
+    .members-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+
 /* ===== JOIN / THANKYOU PAGE STYLES ===== */
 .join-page {
     display: flex;
