@@ -62,5 +62,37 @@
         "website": "https://www.localmarketingpros.example.com",
         "image": "images/members/local.png",
         "membership": "Bronze"
+    },
+    {
+        "name": "Quality Automotive Services",
+        "phone": "(256) 901-2345",
+        "address": "444 Motor Avenue, Commerce City, ST 12345",
+        "website": "https://www.qualityautomotive.example.com",
+        "image": "images/members/automotive.svg",
+        "membership": "NP"
+    },
+    {
+        "name": "Premium Coffee House",
+        "phone": "(256) 012-3456",
+        "address": "555 Brew Street, Commerce City, ST 12345",
+        "website": "https://www.premiumcoffeehouse.example.com",
+        "image": "images/members/coffee.svg",
+        "membership": "NP"
+    },
+    {
+        "name": "City Real Estate Group",
+        "phone": "(256) 123-5678",
+        "address": "666 Property Lane, Commerce City, ST 12345",
+        "website": "https://www.cityrealestategroup.example.com",
+        "image": "images/members/realestate.svg",
+        "membership": "Silver"
+    },
+    {
+        "name": "Advanced Fitness Center",
+        "phone": "(256) 234-6789",
+        "address": "777 Wellness Drive, Commerce City, ST 12345",
+        "website": "https://www.advancedfitnesscenter.example.com",
+        "image": "images/members/fitness.svg",
+        "membership": "Bronze"
     }
 ]
