@@ -1,44 +1,57 @@
-/* Basic Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Body Styling */
+/* assets/css/project-plan.css */
 body {
-  font-family: 'Roboto', sans-serif;
-  background-color: #FFFFFF;
-  color: #333333;
-  line-height: 1.6;
-  padding: 20px;
+  font-family: system-ui, sans-serif;
+  margin: 0;
+  background: #f9f9f9;
+  color: #333;
 }
 
-/* Headings */
-h1, h2, h3 {
-  font-family: 'Montserrat', sans-serif;
-  color: #EF0107; /* Arsenal Red */
-  margin-bottom: 10px;
+.header {
+  background: #002D72;
+  color: #fff;
+  padding: 1rem;
 }
 
-/* Header */
-header {
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.section {
+  margin: 2rem 0;
+}
+
+.section h2 {
+  color: #002D72;
+  border-bottom: 2px solid #FFD700;
+  padding-bottom: 0.25rem;
+}
+
+.swatches {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.swatch {
+  flex: 1;
+  padding: 1rem;
+  border-radius: 6px;
+  color: #fff;
   text-align: center;
-  margin-bottom: 20px;
+  font-weight: bold;
 }
 
-/* Sections */
-section {
-  margin-bottom: 20px;
-  padding: 10px;
-  border: 1px solid #EF0107;
-  border-radius: 5px;
-}
+.swatch.red { background: #EF0107; }
+.swatch.gold { background: #FFD700; color: #000; }
+.swatch.navy { background: #002D72; }
+.swatch.white { background: #FFFFFF; color: #000; border: 1px solid #ccc; }
+.swatch.gray { background: #333333; }
 
-/* Footer */
-footer {
+.footer {
+  background: #002D72;
+  color: #fff;
   text-align: center;
-  margin-top: 30px;
-  font-size: 0.9em;
-  color: #666666;
+  padding: 1rem;
 }
