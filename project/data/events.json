@@ -1,0 +1,80 @@
+[
+  {
+    "id": 1,
+    "title": "Arsenal vs Spurs — Screening (Kampala)",
+    "date": "2025-12-20",
+    "time": "19:30",
+    "timezone": "EAT",
+    "location": "Acacia View Lounge",
+    "city": "Kampala",
+    "description": "Watch the Gunners battle their North London rivals with fellow supporters. Food and drinks available.",
+    "capacity": 50,
+    "venue_contact": "+256-701-234567",
+    "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=400&h=300&fit=crop"
+  },
+  {
+    "id": 2,
+    "title": "Midweek Champions League — Jinja",
+    "date": "2025-12-24",
+    "time": "22:00",
+    "timezone": "EAT",
+    "location": "Nile Gardens Viewing Hub",
+    "city": "Jinja",
+    "description": "European football night! Arsenal's Champions League fixture with excellent viewing setup.",
+    "capacity": 45,
+    "venue_contact": "+256-702-345678",
+    "image": "https://images.unsplash.com/photo-1517457373614-b7152f800fd1?w=400&h=300&fit=crop"
+  },
+  {
+    "id": 3,
+    "title": "Community five‑a‑side — Mbale",
+    "date": "2025-12-28",
+    "time": "16:00",
+    "timezone": "EAT",
+    "location": "Mbale Stadium Annex",
+    "city": "Mbale",
+    "description": "Friendly neighborhood soccer match inspired by Arsenal's beautiful football. All skill levels welcome.",
+    "capacity": 30,
+    "venue_contact": "+256-703-456789",
+    "image": "https://images.unsplash.com/photo-1516563318029-ce8606556110?w=400&h=300&fit=crop"
+  },
+  {
+    "id": 4,
+    "title": "Arsenal vs Chelsea — Screening (Jinja)",
+    "date": "2025-12-21",
+    "time": "19:30",
+    "timezone": "EAT",
+    "location": "Nile Gardens Viewing Hub",
+    "city": "Jinja",
+    "description": "Premier League heavyweight clash. Expect a full crowd!",
+    "capacity": 60,
+    "venue_contact": "+256-702-345678",
+    "image": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=400&h=300&fit=crop"
+  },
+  {
+    "id": 5,
+    "title": "Arsenal Women — Watch party (Kampala)",
+    "date": "2025-12-26",
+    "time": "21:00",
+    "timezone": "EAT",
+    "location": "Kampala Central",
+    "city": "Kampala",
+    "description": "Celebrate the Lionesses! Women's football is football, and Arsenal's women's team deserves our support.",
+    "capacity": 35,
+    "venue_contact": "+256-701-234567",
+    "image": "https://images.unsplash.com/photo-1505228395891-9a51e7e86e81?w=400&h=300&fit=crop"
+  },
+  {
+    "id": 6,
+    "title": "Emirates Stadium Tour — London Trip",
+    "date": "2026-03-15",
+    "time": "10:00",
+    "timezone": "GMT",
+    "location": "Emirates Stadium, London",
+    "city": "London",
+    "description": "Experience the home of Arsenal! Full stadium tour including the pitch, dressing rooms, and museum. All supporters welcome.",
+    "capacity": 100,
+    "venue_contact": "tours@arsenal.com",
+    "image": "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=400&h=300&fit=crop"
+  }
+]
