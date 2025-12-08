@@ -1,9 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
   const container = document.getElementById("events-container");
   
-  // Image rotation sets discovered in project/images/
-  // Only include files that actually exist in the workspace; other events will fall back to their
-  // `image` property from `data/events.json` (or the placeholder behavior).
+  // Image rotation sets auto-detected from project/images/
+  // Events not listed fall back to their `image` property from `data/events.json`
   const imageRotations = {
     1: [
       "images/event1-img1.jpeg",
@@ -14,15 +13,28 @@ document.addEventListener("DOMContentLoaded", () => {
       "images/event2-img1.jpeg",
       "images/event2-img2.jpeg",
       "images/event2-img3.jpeg"
+    ],
+    3: [
+      "images/event3-img1.jpeg",
+      "images/event3-img2.jpeg",
+      "images/event3-img3.jpeg"
+    ],
+    4: [
+      "images/event4-img1.jpeg",
+      "images/event4-img2.jpeg",
+      "images/event4-img3.jpeg"
+    ],
+    5: [
+      "images/event5-img1.jpeg",
+      "images/event5-img2.jpeg",
+      "images/event5-img3.jpeg"
+    ],
+    6: [
+      "images/event6-img1.jpeg",
+      "images/event6-img2.jpeg",
+      "images/event6-img3.jpeg"
     ]
   };
-
-  // Added mapping for event 3 images found in project/images
-  imageRotations[3] = [
-    "images/event3-img1.jpeg",
-    "images/event3-img2.jpeg",
-    "images/event3-img3.jpeg"
-  ];
 
   fetch("data/events.json")
     .then(response => response.json())
