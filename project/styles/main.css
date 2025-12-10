@@ -89,7 +89,45 @@ a:focus-visible, button:focus-visible {
   color: var(--navy); font-weight: 700;
 }
 .brand img { width: 36px; height: 36px; border-radius: 50%; }
-.nav ul { display: flex; list-style: none; margin: 0; padding: 0; gap: 0.75rem; }
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 101;
+}
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: var(--navy);
+  margin: 4px 0;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+.hamburger[aria-expanded="true"] span:nth-child(1) {
+  transform: rotate(45deg) translate(10px, 10px);
+}
+.hamburger[aria-expanded="true"] span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger[aria-expanded="true"] span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+.nav-menu {
+  display: flex;
+}
+.nav-menu ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 0.75rem;
+}
 .nav a {
   padding: 0.5rem 0.75rem; border-radius: 6px; font-weight: 600;
 }
@@ -102,6 +140,40 @@ a:focus-visible, button:focus-visible {
 }
 .nav a:active {
   background: #eaeef2;
+}
+
+/* Mobile Menu Toggle */
+@media (max-width: 640px) {
+  .hamburger {
+    display: flex;
+  }
+  .nav-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    width: 100%;
+  }
+  .nav-menu.active {
+    max-height: 500px;
+  }
+  .nav-menu ul {
+    flex-direction: column;
+    padding: 1rem;
+    gap: 0;
+  }
+  .nav-menu li {
+    padding: 0.5rem 0;
+  }
+  .nav a {
+    display: block;
+    padding: 0.75rem 1rem;
+  }
 }
 
 /* Hero */

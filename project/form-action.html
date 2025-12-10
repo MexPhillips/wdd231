@@ -4,11 +4,10 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="author" content="Kaluba Phillip" />
-  <meta name="description" content="Upcoming events and meetups for Arsenal fans across Uganda. Join watch parties in Kampala, Jinja, Mbale, and more." /> 
-  <title>Uganda Arsenal Fan Community — Events</title>
+  <meta name="description" content="Submission confirmation for joining the Uganda Arsenal Fan Community." />
+  <title>Form Submission — Uganda Arsenal Fan Community</title>
   <link rel="stylesheet" href="styles/main.css" />
 </head>
-
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
@@ -30,7 +29,7 @@
       <nav aria-label="Primary" id="nav-menu" class="nav-menu">
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="events.html" aria-current="page">Events</a></li>
+          <li><a href="events.html">Events</a></li>
           <li><a href="resources.html">Resources</a></li>
           <li><a href="join.html">Join</a></li>
         </ul>
@@ -39,28 +38,22 @@
   </header>
 
   <main id="main">
-    <section class="section">
-      <div class="container">
-        <h1>Upcoming events</h1>
-        <p>All times in East Africa Time (EAT). Venues confirmed by local city leads.</p>
-        <div class="grid cards-3" id="events-container">
-        </div>
-      </div>
-    </section>
-
     <section class="section soft">
       <div class="container">
-        <h2>Past events</h2>
-        <div class="grid cards-3">
-          <figure class="card">
-            <figcaption>North London Derby — Full house in Jinja</figcaption>
-          </figure>
-          <figure class="card">
-            <figcaption>Season opener — Kampala meetup</figcaption>
-          </figure>
-          <figure class="card">
-            <figcaption>Five‑a‑side — Friendly tournament</figcaption>
-          </figure>
+        <h1>Submission Confirmed! 🎉</h1>
+        <p>Thank you for joining the Uganda Arsenal Fan Community. Here's what we received:</p>
+
+        <div id="submissionData" style="background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; margin: 1.5rem 0;">
+          <!-- Submission details will be rendered here -->
+        </div>
+
+        <p style="color: #666; margin-top: 1.5rem;">
+          A confirmation email has been sent to you with details about your membership and upcoming events in your selected city.
+        </p>
+
+        <div style="margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+          <a href="index.html" class="btn">Back to Home</a>
+          <a href="events.html" class="btn">View Upcoming Events</a>
         </div>
       </div>
     </section>
@@ -71,7 +64,8 @@
       <small>© 2025 Uganda Arsenal Fan Community</small>
     </div>
   </footer>
+
   <script type="module" src="scripts/menu.js"></script>
-  <script type="module" src="scripts/events.js"></script>
+  <script src="scripts/form-action.js" defer></script>
 </body>
 </html>

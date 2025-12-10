@@ -21,7 +21,12 @@
         </svg>
         <span>Uganda Arsenal Fans</span>
       </a>
-      <nav aria-label="Primary">
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav aria-label="Primary" id="nav-menu" class="nav-menu">
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="events.html">Events</a></li>
@@ -38,7 +43,7 @@
         <h1>Fan resources</h1>
 
         <div id="resources-container" class="grid cols-2">
-          <!-- Dynamic resource cards will be rendered here by `scripts/resources.js` -->
+          
         </div>
       </div>
     </section>
@@ -49,6 +54,7 @@
       <small>© 2025 Uganda Arsenal Fan Community</small>
     </div>
   </footer>
+  <script type="module" src="scripts/menu.js"></script>
   <script src="scripts/resources.js" defer></script>
 </body>
 </html>
